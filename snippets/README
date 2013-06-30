@@ -1,0 +1,13 @@
+We've already included it in our bundle/ folder so its already enabled. Try opening up a python file and typing 'def<tab>'. It should stub out a method definition for you and allow you to tab through and fill out the arguments, doc string, etc.
+
+I also like to create my own snippets folder to put in some custom snippets:
+
+$ mkdir ~/.vim/snippets
+$ vim ~/.vim/snippets/python.snippets
+Put this in the file:
+
+snippet pdb
+    import pdb; pdb.set_trace()
+Now you can type pdb<tab> and it'll insert your breakpoint!
+
+
