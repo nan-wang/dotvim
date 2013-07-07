@@ -1,7 +1,7 @@
-"call pathogen#infect()
-filetype off
+"filetype off
 "call pathogen#runtime_append_all_bundles()
-call pathogen#incubate()
+call pathogen#infect()
+"call pathogen#incubate()
 call pathogen#helptags()
 
 "=======================================
@@ -16,6 +16,9 @@ set foldlevel=99
 "map <c-k> <c-w>k
 "map <c-l> <c-w>l
 "map <c-h> <c-w>h
+
+"" snippets
+"let g:snips_author = 'Nan Wang'
 
 "" Task lists
 map <leader>td <Plug>TaskList
