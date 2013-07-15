@@ -52,7 +52,7 @@ set completeopt=menuone,longest,preview
 map <leader>t :NERDTreeToggle<CR>
 """ refactorying and go to with ropevim
 map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR> 
+map <leader>mv :RopeRename<CR> 
 
 """ search with ack
 nmap <leader>a <Esc>:Ack!
