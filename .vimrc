@@ -10,6 +10,8 @@ call pathogen#helptags()
 "" code folding
 set foldmethod=indent
 set foldlevel=99
+"" code indent
+au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 textwidth=79
 
 "" move windows with Ctrl + <move_ment>
 "map <c-j> <c-w>j
@@ -131,9 +133,32 @@ let g:yankring_history_dir='~/vimtmp'
 
 "========================================
 "<plug-in>for AuthorInfo
+nmap <F4> :AuthorInfoDetect<cr> 
 let g:vimrc_author="Nan Wang"
 let g:vimrc_email="nan.wang.28@gmail.com"
 let g:vimrc_homepage="http://www.rub.de/ini/PEOPLE/nan"
 
 "========================================
 "taglist is missing
+"<plug-in>for taglist
+map <F12> :call Do_CsTag()<CR>
+function Do_CsTag()
+		let dir = getcwd()
+		if filereadable("tags")
+			let tagsdeleted=delete("./"."tags")
+		endif
+		if(executable('ctags'))
+				silent! execute "!ctags -R --c-types=+p --fields=+S *"
+				silent! execute "!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
+                silent! execute "!ctags -R --python-kinds=-i --fields=+iaS --extra=+q ."
+		endif
+endfunction
+"<F8> run TlistToggle 
+nnoremap <silent> <F8> :TlistToggle<CR>
+let Tlist_Ctags_Cmd='ctags -R'
+let Tlist_Use_Right_Window=1
+let Tlist_Show_One_File=0
+let Tlist_File_Fold_Auto_Close=1
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Process_File_Always=0
+let Tlist_Inc_Winwidth=0
