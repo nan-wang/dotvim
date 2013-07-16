@@ -34,7 +34,8 @@ syntax on
 """ try to detect filetypes
 filetype on                          
 """ enable loading indent file for filetype
-filetype plugin indent on    
+" Conflicts with lux21 for unknown reasons.
+"filetype plugin indent on    
 """ check the consistence with pep-8
 let g:pep8_map='<leader>8'
 
@@ -112,10 +113,6 @@ au FileType latex setlocal textwidth=79 autoindent
 let g:Tex_ViewRule_dvi = 'evince'
 let g:Tex_ViewRule_pdf = 'evince'
 let g:tex_flavor = 'latex'
-
-""MiKTex
-set nocompatible
-source $VIMRUNTIME/vimrc_example.vim
 
 ""Mapping \la to run !latex %
 noremap <leader>la :!latex %<CR>
