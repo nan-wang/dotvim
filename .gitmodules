@@ -79,3 +79,9 @@
 [submodule "bundle/AutomaticLaTex"]
 	path = bundle/AutomaticLaTex
 	url = https://github.com/vim-scripts/AutomaticLaTexPlugin.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-taghighlight"]
+	path = bundle/vim-taghighlight
+	url = https://github.com/skroll/vim-taghighlight.git
