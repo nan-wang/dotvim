@@ -76,3 +76,6 @@
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/AutomaticLaTex"]
+	path = bundle/AutomaticLaTex
+	url = https://github.com/vim-scripts/AutomaticLaTexPlugin.git
