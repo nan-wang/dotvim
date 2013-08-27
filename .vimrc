@@ -163,3 +163,6 @@ let Tlist_Inc_Winwidth=0
 "Solarized
 set background=dark
 colorscheme solarized
+
+"Miscellous
+set autoindent
