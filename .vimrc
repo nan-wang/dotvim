@@ -116,9 +116,29 @@ let g:tex_flavor = 'latex'
 
 ""Mapping \la to run !latex %
 noremap <leader>la :!latex %<CR>
-noremap <leader>ld :!yap %:r<CR>
+noremap <leader>ld :!evince %:r.dvi<CR>
 set fileformat=unix
 
+" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
+filetype plugin on
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" OPTIONAL: This enables automatic indentation as you type.
+filetype indent on
+
+"In addition, the following settings could go in your ~/.vim/ftplugin/tex.vim
+"file:  >
+    "" this is mostly a matter of taste. but LaTeX looks good with just a bit
+    "" of indentation.
+    "set sw=2
+    "" TIP: if you write your \label's as \label{fig:something}, then if you
+    "" type in \ref{fig: and press <C-n> you will automatically cycle through
+    "" all the figure labels. Very useful!
+    "set iskeyword+=:
 "========================================
 "VIMWIKI
 let g:vimwiki_list = [{'path': '~/PhD/Notes/NoteBook/', 'path_html': '~/PhD/Notes/NoteBookExport/'}]
