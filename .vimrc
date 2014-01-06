@@ -53,6 +53,7 @@ set completeopt=menuone,longest,preview
 
 """ NERDTree
 map <leader>t :NERDTreeToggle<CR>
+let g:NERDTreeDirArrows=0
 """ refactorying and go to with ropevim
 map <leader>j :RopeGotoDefinition<CR>
 map <leader>mv :RopeRename<CR> 
