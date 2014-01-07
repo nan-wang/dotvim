@@ -48,6 +48,8 @@ set completeopt=menuone,longest,preview
 "" Code navigation
 """ buffer plug-in minibufexpl
 """ use :b<num> to switch between buffers
+map <leader>gt :bNext<CR>
+map <leader>Gt :bPrevious<CR>
 
 """ fuzzy text file search with comment-t
 
