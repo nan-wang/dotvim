@@ -42,6 +42,7 @@ let g:pep8_map='<leader>8'
 "" Tab completion and documentation
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabMappingTabLiteral = '<c-t>'
 """ use pydoc with <leader>pw
 set completeopt=menuone,longest,preview
 
@@ -161,7 +162,7 @@ let g:vimrc_homepage="http://www.rub.de/ini/PEOPLE/nan"
 "========================================
 "taglist is missing
 "<plug-in>for taglist
-map <F12> :call Do_CsTag()<CR>
+map <F10> :call Do_CsTag()<CR>
 function Do_CsTag()
 		let dir = getcwd()
 		if filereadable("tags")
@@ -175,7 +176,7 @@ function Do_CsTag()
 endfunction
 "<F8> run TlistToggle 
 nnoremap <silent> <F8> :TlistToggle<CR>
-let Tlist_Ctags_Cmd='ctags -R'
+let Tlist_Ctags_Cmd='ctags --recurse'
 let Tlist_Use_Right_Window=1
 let Tlist_Show_One_File=0
 let Tlist_File_Fold_Auto_Close=1
