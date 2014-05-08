@@ -9,7 +9,7 @@ call pathogen#helptags()
 "refer to http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
 "" code folding
 set foldmethod=indent
-set foldlevel=99
+set foldlevelstart=0
 "" code indent
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 textwidth=79
 
