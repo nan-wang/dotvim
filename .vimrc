@@ -193,3 +193,9 @@ set autoindent
 
 "Evernote
 let g:evervim_devtoken='S=s9:U=10bd03:E=14a9b8a1a25:C=14343d8ee28:P=1cd:A=en-devtoken:V=2:H=a453e954ba950e13c2ea03e1d71917e4'
+
+"Chinese character
+set fileencodings=utf-8
+set fileencoding=utf-8
+set encoding=utf-8
+set termencoding=utf-8
