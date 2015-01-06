@@ -183,7 +183,7 @@ let Tlist_File_Fold_Auto_Close=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Process_File_Always=0
 let Tlist_Inc_Winwidth=0
-
+let Tlist_WinWidth = 50
 "Solarized
 set background=dark
 colorscheme solarized
