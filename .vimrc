@@ -199,3 +199,7 @@ set fileencodings=utf-8
 set fileencoding=utf-8
 set encoding=utf-8
 set termencoding=utf-8
+
+"tab width
+set tabstop=4
+set shiftwidth=4
