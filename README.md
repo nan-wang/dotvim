@@ -12,6 +12,20 @@ Switch to the `~/.vim` directory, and fetch submodules:
     git submodule init
     git submodule update
 
+Switch all the submodules to master branch:
+
+    git submodule foreach git checkout master 
+
+Install rope:
+
+    cd ~/.vim/bundle/rope/
+    python setup.py install
+
+
+Update submodules with upstream repository:
+
+    git submodule foreach git pull
+
 Delete a submodule:
 
     cd ~/.vim
@@ -24,7 +38,3 @@ Add a new submodule:
     git submodule add https://github.com/python-rope/ropevim.git bundle/ropevim
     git submodule init bundle/ropevim
     git submodule update bundle/ropevim
-
-Update submodules with upstream repository:
-
-    git submodule foreach git pull
