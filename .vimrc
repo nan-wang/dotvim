@@ -188,6 +188,11 @@ let Tlist_WinWidth = 50
 set background=dark
 colorscheme solarized
 
+"========================================
+"<plug-in> for vim-livedown
+"
+nmap gm :LivedownToggle<CR>
+
 "Miscellous
 set autoindent
 
