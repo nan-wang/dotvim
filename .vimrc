@@ -186,7 +186,7 @@ let Tlist_Inc_Winwidth=0
 let Tlist_WinWidth = 50
 "Solarized
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 "========================================
 "<plug-in> for vim-livedown
@@ -208,3 +208,9 @@ set termencoding=utf-8
 "tab width
 set tabstop=4
 set shiftwidth=4
+
+"Mac OS X delete issue
+set backspace=indent,eol,start
+
+"search seleted text
+vnoremap // y/<C-R>"<CR>
